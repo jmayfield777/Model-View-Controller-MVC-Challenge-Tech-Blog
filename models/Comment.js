@@ -15,14 +15,14 @@ Comment.init(
       type: Datatypes.STRING,
       allowNull: false,
     },
-    userId: {
+    user_id: {
       type: Datatypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
       },
     },
-    blogPostId: {
+    blog_id: {
       type: Datatypes.INTEGER,
       references: {
         model: 'blogpost',

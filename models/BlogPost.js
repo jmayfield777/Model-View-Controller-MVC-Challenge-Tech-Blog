@@ -11,15 +11,15 @@ BlogPost.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    blogTitle: {
+    blog_title: {
       type: Datatypes.STRING,
       allowNull: false,
     },
-    blogText: {
+    blog_text: {
       type: Datatypes.STRING,
       allowNull: false,
     },
-    userId: {
+    user_id: {
       type: Datatypes.INTEGER,
       references: {
         model: 'user',
