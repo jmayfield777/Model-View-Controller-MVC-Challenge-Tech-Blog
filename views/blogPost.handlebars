@@ -1,0 +1,22 @@
+<a>Go Back</a>
+
+
+{{> blogpost-info blogpost}}
+
+{{#if loggedIn}}
+<form>
+  <div>
+    <textarea></textarea>
+  </div>
+
+  <div>
+    <textarea></textarea>
+  </div>
+</form>
+{{/if}}
+
+{{> comments blogpost.comments}}
+
+{{#if loggedIn}}
+<script></script>
+{{/if}}
