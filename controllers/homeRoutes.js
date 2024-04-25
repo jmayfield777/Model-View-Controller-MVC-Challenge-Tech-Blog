@@ -80,3 +80,24 @@ router.get('/dashboard', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// login route
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  } else {
+    res.render('login');
+  }
+});
+
+// signup route
+router.get('/signup', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+  } else {
+    res.render('signup');
+  }
+});
+
+module.exports = router;
