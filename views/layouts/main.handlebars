@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Heaven</title>
+    <link ref="stylesheet" href="" />
+  </head>
+
+  <body>
+    <div>
+      <header>
+        <h1>
+          <a>Home</a>
+        </h1>
+        <nav>
+          {{#if loggedIn}}
+          <a>Dashboard</a>
+          <button>Logout</button>
+          {{else}}
+          <a>Login</a>
+          {{/if}}
+        </nav>
+      </header>
+      <div>
+        <div>
+          <h1>Tech Heaven</h1>
+        </div>
+      </div>
+      <main>
+        {{{body}}}
+      </main>
+    </div>
+
+    {{#if loggedIn}}
+    <script></script>
+    {{/if}}
+  </body>
+  
+</html>
