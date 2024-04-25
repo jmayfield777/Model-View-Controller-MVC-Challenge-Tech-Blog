@@ -1,0 +1,19 @@
+<div>
+  <button>Create</button>
+</div>
+
+{{#if blogposts.length}}
+<section>
+  <h2>Navbar</h2>
+  <ul>
+    {{#each blogposts as |blogpost|}}
+    <li>
+      {{> blogpost-info blogposts}}
+      <a>Edit</a>
+    </li>
+    {{/each}}
+  </ul>
+</section>
+{{/if}}
+
+<script></script>
