@@ -1,7 +1,26 @@
-<ul>
-  {{#each blogposts as |blogpost|}}
-  <li>
-    {{> blogpost-info blogpost}}
-  </li>
-  {{/each}}
-</ul>
+{{#each blogposts as |blogpost|}}
+<section>
+
+  <article>
+    <div>
+      <h2>
+        <a>{{blogpost.blog_title}}</a>
+      </h2>
+    </div>
+
+    <div>
+      <p>
+        Created by
+        {{blogpost.user.name}}
+      </p>
+    </div>
+
+    <div>
+      <p>
+        {{blogpost.blog_text}}
+      </p>
+    </div>
+  </article>
+
+</section>
+{{/each}}
