@@ -1,19 +1,50 @@
-<div>
-  <button>Create</button>
-</div>
+<section>
+
+  <div>
+    <h2>Hello, {{name}}</h2>
+  </div>
+
+</section>
+
+<section>
+
+  <div>
+    <h3>Create a New Blog Post</h3>
+  </div>
+
+  <form>
+  
+    <div>
+      <input />
+    </div>
+
+    <div>
+      <textarea></textarea>
+    </div>
+
+    <div>
+      <button>Create Post</button>
+    </div>
+
+  </form>
+
+</section>
 
 {{#if blogposts.length}}
 <section>
-  <h2>Navbar</h2>
-  <ul>
-    {{#each blogposts as |blogpost|}}
-    <li>
-      {{> blogpost-info blogposts}}
-      <a>Edit</a>
-    </li>
+  <h3>Posts</h3>
+
+  {{#each blogposts as |blogpost|}}
+  <section>
+    <div>
+      <h4><a>{{blogpost.blog_title}}</a></h4>
+    </div>
+    <div>
+      <button>Delete</button>
+    </div>
     {{/each}}
-  </ul>
+  </section>
+  {{/if}}
 </section>
-{{/if}}
 
 <script></script>
