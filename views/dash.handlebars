@@ -12,14 +12,14 @@
     <h3>Create a New Blog Post</h3>
   </div>
 
-  <form>
+  <form class="create-blog-post">
   
     <div>
-      <input />
+      <input id="title" />
     </div>
 
     <div>
-      <textarea></textarea>
+      <textarea id="description"></textarea>
     </div>
 
     <div>
@@ -31,7 +31,7 @@
 </section>
 
 {{#if blogposts.length}}
-<section>
+<section class="blogposts">
   <h3>Posts</h3>
 
   {{#each blogposts as |blogpost|}}
@@ -40,7 +40,7 @@
       <h4><a>{{blogpost.blog_title}}</a></h4>
     </div>
     <div>
-      <button>Delete</button>
+      <button data-id="{{blogpost.id}}">Delete</button>
     </div>
     {{/each}}
   </section>
