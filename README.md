@@ -90,7 +90,7 @@ https://stackoverflow.com/questions/70021854/error-data-must-be-a-string-or-buff
 
 https://stackoverflow.com/questions/36744308/next-is-not-defined-but-i-dont-understand-how-to-define-it-in-my-function (debugging)
 
-https://github.com/CodyG-2021/14-Model-View-Controller-MVC-Tech-Blog/blob/main/controllers/homeRoutes.js (help with homeRoutes - they are not working however)
+https://github.com/CodyG-2021/14-Model-View-Controller-MVC-Tech-Blog/blob/main/controllers/homeRoutes.js (help with Routes - they are not working however)
 
 Followed along with some of the activities in the week 14 folder - MVC.
 
