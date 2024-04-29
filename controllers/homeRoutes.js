@@ -6,18 +6,24 @@ const withAuth = require('../utils/withAuth');
 router.get('/', async (req, res) => {
   try {
     const blogData = await BlogPost.findAll({
-      include: [{
-        model: User,
-        attributes: ['name'],
-      }],
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+        {
+          model: Comment,
+          attributes: ['text'],
+        },
+      ],
     });
 
-    const blogs = blogData.map((blog) => blog.get({
+    const blogpost = blogData.map((blogpost) => blogpost.get({
       plain: true,
     }));
 
     res.render('homepage', {
-      blogs,
+      blogpost,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -36,23 +42,22 @@ router.get('/blogpost/:id', async (req, res) => {
         },
         {
           model: Comment,
-          include: [
-            User
-          ],
+          include: [User],
         },
       ],
     });
 
-    const blog = blogData.get({
+    const blogpost = blogData.get({
       plain: true
     });
 
     res.render('blogPost', {
-      ...blog,
+      ...blogpost,
       logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
+    res.redirect('/login');
   }
 });
 
@@ -63,9 +68,15 @@ router.get('/dashboard', withAuth, async (req, res) => {
       attributes: {
         exclude: ['password']
       },
-        include: [{
-          model: BlogPost
-        }],
+        include: [
+          {
+            model: BlogPost,
+            include: [User],
+          },
+          {
+            model: Comment,
+          },
+        ],
     });
 
     const loggedInUser = userData.get({
