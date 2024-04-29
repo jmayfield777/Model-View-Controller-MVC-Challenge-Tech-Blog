@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, BlogPost, Comment } = require('../../models');
+const { User } = require('../../models');
 
 
 // route to create a new user
@@ -26,7 +26,7 @@ router.post('/login', async (req, res) => {
     if (!userData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
+        .json({ message: 'Incorrect name or password, please try again' });
       return;
     }
 
