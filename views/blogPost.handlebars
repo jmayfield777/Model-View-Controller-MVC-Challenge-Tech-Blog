@@ -1,22 +1,55 @@
-<a>Go Back</a>
+<section>
 
+  <article>
 
-{{> blogpost-info blogpost}}
+    <div>
 
-{{#if loggedIn}}
+      <div>
+        <h2>{{blogpost.blog_title}}</h2>
+      </div>
+
+      <div>
+        <p>Created by:
+          {{user.name}}
+        </p>
+      </div>
+
+    </div>
+
+    <p>{{blogpost.blog_title}}</p>
+
+  </article>
+
+</section>
+
+{{#if logged_in}}
+
 <form>
+
   <div>
     <textarea></textarea>
   </div>
 
   <div>
-    <textarea></textarea>
+    <button>Add Comment</button>
   </div>
+
 </form>
+
 {{/if}}
 
-{{> comments blogpost.comments}}
+<h2>Comments</h2>
+{{#each comments as |comment|}}
 
-{{#if loggedIn}}
+<div>
+
+  <p>{{comment.comment_description}}</p>
+  <p>Created by:
+    {{comment.user.name}}
+  </p>
+
+</div>
+
+{{/each}}
+
 <script></script>
-{{/if}}
