@@ -13,15 +13,28 @@ BlogPost.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
+// user has many comments
+User.hasMany(Comment, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
 // create relationship between blogposts and comments
 BlogPost.hasMany(Comment, {
-    foreignKey: 'blogpost_id',
-  });
+  foreignKey: 'blogpost_id',
+  onDelete: 'CASCADE'
+});
 
 // use belongsTo to connect comments to users
 Comment.belongsTo(User, {
   foreignKey: 'user_id'
 });
+
+// comments belong to blogpost
+Comment.belongsTo(BlogPost, {
+  foreignKey: 'blogpost_id',
+  onDelete: 'CASCADE'
+})
 
 module.exports = {
   User,
