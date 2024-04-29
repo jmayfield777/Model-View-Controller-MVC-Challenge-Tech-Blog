@@ -1,0 +1,17 @@
+[
+  {
+    "blog_title": "blogpost",
+    "blog_text": "description",
+    "user_id": 1
+  },
+  {
+    "blog_title": "blogpost two",
+    "blog_text": "description two",
+    "user_id": 2
+  },
+  {
+    "blog_title": "blogpost three",
+    "blog_text": "description three",
+    "user_id": 3
+  }
+]

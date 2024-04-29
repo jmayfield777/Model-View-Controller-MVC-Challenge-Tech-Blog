@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Heaven</title>
-    <link ref="stylesheet" href="" />
+    <link ref="stylesheet" href="/css/style.css" />
   </head>
 
   <body>
@@ -16,10 +16,16 @@
         </h1>
         <nav>
           {{#if loggedIn}}
-          <a>Dashboard</a>
+          <a href="/dashboard">Dashboard</a>
           <button id="logout-button">Logout</button>
           {{else}}
-          <a>Login</a>
+          <li>
+            <a href="/login">Login</a>
+          </li>
+
+          <li>
+            <a href="/signup">Signup</a>
+          </li>
           {{/if}}
         </nav>
       </header>
