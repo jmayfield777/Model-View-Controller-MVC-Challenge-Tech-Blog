@@ -1,10 +1,10 @@
 {{#each blogposts as |blogpost|}}
 <section>
 
-  <article>
+  <article class="blogpost-container">
     <div>
       <h2>
-        <a>{{blogpost.blog_title}}</a>
+        <a class="blogpost-title">{{blogpost.blog_title}}</a>
       </h2>
     </div>
 
@@ -15,8 +15,8 @@
       </p>
     </div>
 
-    <div>
-      <p>
+    <div class="blogpost-description">
+      <p class="blogpost-text">
         {{blogpost.blog_text}}
       </p>
     </div>

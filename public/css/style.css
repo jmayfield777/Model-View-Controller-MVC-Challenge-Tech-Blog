@@ -1,0 +1,102 @@
+.navbar-title {
+  font-weight: 900;
+  font-size: xx-large;
+}
+
+.blogpost-container {
+  margin-top: 8px;
+  border-style: solid;
+}
+
+.blogpost-title {
+  text-decoration: none;
+  color: black;
+}
+
+.blogpost-description {
+  border-style: solid;
+  margin-bottom: 5px;
+  padding: 2px;
+  background-color: rgb(113, 143, 62);
+}
+
+.blogpost-text {
+  font-weight: 700;
+}
+
+.new-blogpost-description {
+  font-size: 25px;
+  font-style: italic;
+}
+
+.new-blogpost {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 12px;
+  padding: 5px;
+  color: black;
+}
+
+.blogpost-div {
+	margin-top: 10px;
+  border-style: solid;
+  background-color: rgb(113, 143, 62);
+}
+
+.blogpost-form {
+  margin-top: 10px;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comment-div {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  max-width: 75%;
+  background-color: rgb(113, 143, 62);
+  border-style: dashed;
+}
+
+.comment-user {
+  font-size: 14px;
+}
+
+.create-comment {
+  margin-top: 10px;
+}
+
+.comment-description {
+  font-weight: bold;
+  padding-top: 10px;
+  background-color: rgb(113, 143, 62);
+}
+
+.blog-title-container {
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+a:link {
+    color: rgb(29, 200, 23);
+  }
+  a:visited {
+    color: rgb(182, 179, 41);
+  }
+  
+  a:hover {
+    color: deeppink;
+  }
+  
+  .login-title{
+      margin-left: 25px;
+  }
+  
+  .signup-title{
+      margin-left: 25px;
+  }
+  
+  .form-group{
+      margin-top: 10px;
+  }
